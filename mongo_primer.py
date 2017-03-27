@@ -34,5 +34,16 @@ result = db.restaurants.insert_one(
     }
 )
 
+#an example adding many products to a collection of products via insertMany():
+try {
+   db.products.insertMany( [
+      { _id: 10, item: "large box", qty: 20 },
+      { _id: 11, item: "small box", qty: 55 },
+      { _id: 12, item: "medium box", qty: 30 }
+   ] );
+} catch (e) {
+   print (e);
+}
+
 if __name__ == '__main__':
     main()
