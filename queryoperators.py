@@ -13,6 +13,8 @@ cursor = db.restaurants.find({"grades.score": {"$gt": 30}})
 #less than query:
 cursor = db.restaurants.find({"grades.score": {"$lt": 10}})
 
+logical and is executed with a comma separating a list of query conditions:
+cursor = db.restaurants.find({"cuisine": "Italian", "address.zipcode": "10075"})
 
 
 
