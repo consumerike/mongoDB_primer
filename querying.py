@@ -20,4 +20,6 @@ for document in cursor:
 # for embedded documents use dot notation:
 cursor = db.resturants.find("address.zipcode": "98021")
 
+#for querying within an array, where I'm trying to find grades of "B"
+cursor = db.restaurants.find({"grades.grade": "B"})
 
